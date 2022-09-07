@@ -3,9 +3,9 @@
 const box = document.getElementById('box'),
     btns = document.getElementsByTagName('button'),
     circles = document.getElementsByClassName('circle'),
-    hearts = document.querySelectorAll('.heart'),
-    oneHeart = document.querySelector('.heart'),
-    wrapper = document.querySelector('.wrapper');
+    wrapper = document.querySelector('.wrapper'),
+    hearts = wrapper.querySelectorAll('.heart'),
+    oneHeart = wrapper.querySelector('.heart');
 
 // box.style.backgroundColor = 'Blue';
 // box.style.width = '500px';
@@ -37,8 +37,10 @@ document.querySelector('.wrapper').append(div);
 // wrapper.insertBefore(div, hearts[2]); // old method
 // circles[0].remove();
 // wrapper.removeChild(hearts[1]);  // old method
-// hearts[0].replaceWith(circles[0]);
+hearts[0].replaceWith(circles[0]);
 // wrapper.replaceChild(circles[0], hearts[0]);  // old method
 
-// div.innerHTML = "<h1>Hello World</h1>";
-div.textContent = "Hello";
+div.innerHTML = "<h1>Hello World</h1>";
+// div.textContent = "Hello";
+
+div.insertAdjacentHTML("afterend", '<h2>Hello</h2>');
