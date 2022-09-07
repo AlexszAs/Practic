@@ -365,3 +365,79 @@
 // function showProgrammingLangs(plan) {
 
 // }
+
+
+// const soilder = {
+//     helth: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log("hello");
+//     }
+// };
+
+// const john = Object.create(soilder);
+
+// // john.__proto__ = soilder;
+// // console.log(john.sayHello);
+
+// Object.setPrototypeOf(john, soilder);
+// john.sayHello();
+
+
+// console.log(typeof(5 + ''));
+
+// const num = 5;
+// console.log("https://vk.com/catalog/" + num);
+
+// const fontSize = 26 + 'px';
+
+
+// console.log(typeof(Number('4')));
+// console.log(typeof(+'5'));
+// console.log(typeof(parseInt("15px", 10)));
+
+// let answ = +prompt("Hello", "");
+
+// 0, '', null, undefined, NaN;
+
+// let switcher = null;
+
+// if (switcher) {
+//     console.log("working");
+// }
+
+// switcher = 1;
+
+// if (switcher) {
+//     console.log("working");
+// }
+
+
+// console.log(typeof(Boolean('4')));
+
+// console.log(typeof(!!'4'));
+
+//  function createCounter () {
+//     let counter = 0;
+
+//     const myFunction = function() {
+//         counter = counter + 1;
+//         return counter;
+//     };
+//     return myFunction;
+//  }
+
+//  const increment = createCounter();
+//  const c1 = increment();
+//  const c2 = increment();
+//  const c3 = increment();
+
+//  console.log(c1, c2, c3);
+
+
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+        let num = 3;
+    }
+    console.log(num);
+}
