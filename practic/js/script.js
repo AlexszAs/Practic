@@ -442,44 +442,44 @@
 //     console.log(num);
 // }
 
-const btn = document.querySelector('button'),
-    bt = document.querySelector('.bt');
+// const btn = document.querySelector('button'),
+//     bt = document.querySelector('.bt');
 
 
-// btn.onclick = function() {
-//     alert('click');
-// };
-// let i = 0;
-// const del = (e) => {
-//     e.target.remove();
-//     i++;
-//     if (i == 1) {
-//         btn.removeEventListener('click', del);
-//     }
-// };
+// // btn.onclick = function() {
+// //     alert('click');
+// // };
+// // let i = 0;
+// // const del = (e) => {
+// //     e.target.remove();
+// //     i++;
+// //     if (i == 1) {
+// //         btn.removeEventListener('click', del);
+// //     }
+// // };
 
-// btn.addEventListener('click', del);
+// // btn.addEventListener('click', del);
 
-// bt.addEventListener('click', () => {
-//     bt.style.backgroundColor = "red";
-//     bt.style.color = "black";
+// // bt.addEventListener('click', () => {
+// //     bt.style.backgroundColor = "red";
+// //     bt.style.color = "black";
+// // });
+
+// // bt.addEventListener('click', () => {
+// //     bt.style.backgroundColor = "green";
+// //     bt.style.color = "#fff";
+// // });
+
+// const link = document.querySelector('a');
+// link.addEventListener('click', function(event) {
+//     event.preventDefault();
+
+//     console.log(event.target);
 // });
 
-// bt.addEventListener('click', () => {
-//     bt.style.backgroundColor = "green";
-//     bt.style.color = "#fff";
+// btn.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         bt.style.backgroundColor = 'red';
+//         bt.style.color = "black";
+//     });
 // });
-
-const link = document.querySelector('a');
-link.addEventListener('click', function(event) {
-    event.preventDefault();
-
-    console.log(event.target);
-});
-
-btn.forEach(btn => {
-    btn.addEventListener('click', () => {
-        bt.style.backgroundColor = 'red';
-        bt.style.color = "black";
-    });
-});
