@@ -34,85 +34,85 @@
 //         return x * pow(x, n - 1);
 //     }
 
-let students = {
-    js: [{
-        name: 'John',
-        progress: 100
-    }, {
-        name: 'Ivan',
-        progress: 60
-    }],
+// let students = {
+//     js: [{
+//         name: 'John',
+//         progress: 100
+//     }, {
+//         name: 'Ivan',
+//         progress: 60
+//     }],
 
-    html: {
-        basic: [{
-            name: 'Peter',
-            progress: 20
-        }, {
-            name: 'Ann',
-            progress: 18
-        }],
+//     html: {
+//         basic: [{
+//             name: 'Peter',
+//             progress: 20
+//         }, {
+//             name: 'Ann',
+//             progress: 18
+//         }],
 
-        pro: [{
-            name: 'Sam',
-            progress: 10
-        }],
+//         pro: [{
+//             name: 'Sam',
+//             progress: 10
+//         }],
 
-        semi: {
-            students: [{
-                name: 'Test',
-                progress: 100
-            }]
-        }
-    }
-};
+//         semi: {
+//             students: [{
+//                 name: 'Test',
+//                 progress: 100
+//             }]
+//         }
+//     }
+// };
 
-function gettotalProgressByIteration(data) {
-    let total = 0;
-    let students = 0;
+// function gettotalProgressByIteration(data) {
+//     let total = 0;
+//     let students = 0;
 
-    for (let Course of Object.values(data)) {
-        if (Array.isArray(Course)) {
-            students += Course.length;
-            for (let i = 0; i < Course.length; i++) {
-                total += Course[i].progress;
-            }
-        } else {
-            for (let subCourse of Object.values(Course)) {
-                students += subCourse.length;
+//     for (let Course of Object.values(data)) {
+//         if (Array.isArray(Course)) {
+//             students += Course.length;
+//             for (let i = 0; i < Course.length; i++) {
+//                 total += Course[i].progress;
+//             }
+//         } else {
+//             for (let subCourse of Object.values(Course)) {
+//                 students += subCourse.length;
 
-                for (let i = 0; i < subCourse.length; i++) {
-                    total += subCourse[i].progress;
-                }
-            }
-        }
-    }
+//                 for (let i = 0; i < subCourse.length; i++) {
+//                     total += subCourse[i].progress;
+//                 }
+//             }
+//         }
+//     }
 
-    return total / students;
-}
+//     return total / students;
+// }
 
-// console.log(gettotalProgressByIteration(students));
+// // console.log(gettotalProgressByIteration(students));
 
-function getTotalprogressByRecusion(data) {
-    if (Array.isArray(data)) {
-        let total = 0;
+// function getTotalprogressByRecusion(data) {
+//     if (Array.isArray(data)) {
+//         let total = 0;
 
-        for (let i = 0; i < data.length; i++) {
-            total += data[i].progress;
-        }
+//         for (let i = 0; i < data.length; i++) {
+//             total += data[i].progress;
+//         }
 
-        return [total, data.length];
-    } else {
-        let total = [0, 0];
+//         return [total, data.length];
+//     } else {
+//         let total = [0, 0];
 
-        for (let subData of Object.values(data)) {
-            const subDataArr = getTotalprogressByRecusion(subData);
-            total[0] += subDataArr[0];
-            total[1] += subDataArr[1];
-        }
+//         for (let subData of Object.values(data)) {
+//             const subDataArr = getTotalprogressByRecusion(subData);
+//             total[0] += subDataArr[0];
+//             total[1] += subDataArr[1];
+//         }
 
-        return total;
-    }
-}
+//         return total;
+//     }
+// }
 
-const result = getTotalprogressByRecusion(students);
-console.log(result[0] / result[1]);
+// const result = getTotalprogressByRecusion(students);
+// console.log(result[0] / result[1]);
